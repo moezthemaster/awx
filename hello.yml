@@ -4,4 +4,10 @@
   tasks:
     - debug:
         msg: "HELLO WORLD!"
+    - name: execute some commands
+      shell: |
+        pwd; whoami; hostname
+  post_tasks:
+    - debug:
+        msg: "end of execution"
         
