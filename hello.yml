@@ -7,6 +7,8 @@
     - name: execute some commands
       shell: |
         pwd; whoami; hostname
+      register: result
+    - debug: var=result
   post_tasks:
     - debug:
         msg: "end of execution"
